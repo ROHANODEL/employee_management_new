@@ -50,7 +50,7 @@ box-shadow: 10px 10px 15px 0px rgba(23,18,23,0.47);
     
 }
 
-.btn {
+.btn-new {
     background-color: rgb(70, 151, 223);
     margin-left: 120px;
     width: 120px;
@@ -62,4 +62,9 @@ box-shadow: 10px 10px 15px 0px rgba(23,18,23,0.47);
     background-color: rgb(50, 81, 108);
     color: white;
 
+}
+.signnew{
+    cursor: pointer;
+    color: rgb(51, 189, 125);
+    font-weight: bold;
 }

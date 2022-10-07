@@ -9,11 +9,15 @@
 }
 .text{
     color:whitesmoke;
-    
 }
-.row{
+.row-new{
     margin-top: 7px;
+    display: grid;
+    grid-template-columns: 20% 60%;
 }
 .container{
     margin-left: 350px;
+}
+.hr-container{
+    border: 2px solid white;
 }

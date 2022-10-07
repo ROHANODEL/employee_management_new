@@ -4,56 +4,58 @@ import '../style/signup.scss'
 const SignUp = () => {
     return (
         <div>
-            <div class="main">
-                <div class="container form">
+            <div className="main">
+                <div className="container form">
+                <hr className='hr-container'/>
                     <br />
-                    <h3 class="text">Create Your Account</h3>
+                    <h3 className="text">Create Your Account</h3>
 
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label class="text">Enter name:</label>
+                    <div className="row-new">
+                        <div className="">
+                            <label className="text">Enter name:</label>
                         </div>
-                        <div class="col-md-7">
+                        <div className="">
                             <input type="text" placeholder="Enter User here" /><br />
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label class="text">Enter Email ID:</label>
+                    <div className="row-new">
+                        <div className="">
+                            <label className="text">Enter Email ID:</label>
                         </div>
-                        <div class="col-md-7">
+                        <div className="">
                             <input type="email" placeholder="Enter Email ID here" />
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div className="row-new">
 
-                        <div class="col-md-2">
-                            <label class="text">Enter Username:</label>
+                        <div className="">
+                            <label className="text">Enter Username:</label>
                         </div>
-                        <div class="col-md-7">
-                            <input type="text" placeholder="Enter user name here" /><br />
+                        <div className="">
+                            <input type="text" placeholder="Enter user name here" /><br/>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row-new">
 
-                        <div class="col-md-2">
-                            <label class="text">Enter Password:</label>
+                        <div className="">
+                            <label className="text">Enter Password:</label>
                         </div>
-                        <div class="col-md-7">
+                        <div className="">
                             <input type="text" placeholder="Enter password here" /><br />
                         </div>
                     </div>
-                    <div class="row">
-
-                        <div class="col-md-2">
-                            <label class="text">Enter Confirm Password:</label>
+                    <div className="row-new">
+                        <div className="">
+                            <label className="text">Enter Confirm Password:</label>
                         </div>
-                        <div class="col-md-7">
+                        <div className="">
                             <input type="text" placeholder="Enter password here" /><br />
                         </div>
                     </div><br />
-                    <button>Clear Form</button> &emsp;&emsp;&emsp; <a href="../Login/loginPage.html"><button>Create Account</button></a>
+                    <button className='btn btn-warning'>Clear Form</button> &emsp;&emsp;&emsp; <a href="../Login/loginPage.html"><button className='btn btn-primary'>Create Account</button></a>
+                    <hr className='hr-container'/>
+
                 </div>
             </div>
         </div>

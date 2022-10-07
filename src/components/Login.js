@@ -12,21 +12,21 @@ const Login = () => {
     }
     return (
         <div>
-            <div class="mains">
-                <div class="logins">
-                    <img class="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgoUQKr4U8JaQ11JmFu83XmscARur-c3n9A&usqp=CAU" alt="" /><br/><br/>
-                    <input class="inputBox" type="text" placeholder="Enter your Email id" /><br /><br/>
-                    <input class="inputBox" type="password" placeholder="Enter your password" /><br /><br/>
+            <div className="mains">
+                <div className="logins">
+                    <img className="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgoUQKr4U8JaQ11JmFu83XmscARur-c3n9A&usqp=CAU" alt="" /><br/><br/>
+                    <input className="inputBox" type=" " placeholder="Enter your Email id" /><br /><br/>
+                    <input className="inputBox" type="password" placeholder="Enter your password" /><br /><br/>
 
-                    <div class="Registration">
+                    <div className="Registration">
                         <span>
-                            <a onClick={signupClick}>Sign Up</a>
+                            <p className='signnew' onClick={signupClick}>Sign Up</p>
                         </span>
                         <span>
-                            <a>Forgot password ?</a>
+                            <p>Forgot password ?</p>
                         </span> <br />
                     </div><br/>
-                    <button onClick={clickHandler} class="btn">SUBMIT</button>
+                    <button onClick={clickHandler} className="btn-new btn btn-secondary">SUBMIT</button>
                 </div>
             </div>
         </div>
