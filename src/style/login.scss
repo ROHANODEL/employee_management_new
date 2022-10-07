@@ -1,0 +1,65 @@
+.mains {
+    height: 720px;
+    width: 100%;
+    padding: px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(blue, white);
+}
+
+.logins {
+    height: 400px;
+    width: 350px;
+    background-image: linear-gradient(red, blue);
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(23,18,23,0.47);
+-moz-box-shadow: 10px 10px 15px 0px rgba(23,18,23,0.47);
+box-shadow: 10px 10px 15px 0px rgba(23,18,23,0.47);
+
+}
+
+.inputBox {
+    margin-left: 30px;
+    width: 290px;
+    border-top: 1px solid black;
+    padding: 6px;
+
+}
+
+#signUp {
+    margin-left: 40px;
+}
+
+.Registration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+    margin-left: 4rem;
+}
+
+.profileImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 130px;
+    margin-top: 15px;
+    
+}
+
+.btn {
+    background-color: rgb(70, 151, 223);
+    margin-left: 120px;
+    width: 120px;
+    color: white;
+
+}
+
+.btn:hover {
+    background-color: rgb(50, 81, 108);
+    color: white;
+
+}
