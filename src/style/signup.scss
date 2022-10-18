@@ -11,33 +11,26 @@
     }
 
     .container {
-        margin-left: 350px;
-        margin-right: 350px;
+        margin-left: 12%;
+        margin-right: 12%;
     }
-    .form{
-        margin-left: 250px;
+
+    .form {
+        margin-left: 200px;
+        
     }
-    
 }
 
-.text {
+.txt {
     color: black;
-    
-
 }
 
 .row-new {
-    
+
     margin-top: 7px;
     display: grid;
     grid-template-columns: 20% 60%;
-    
-   
-    
-    
 }
-
-
 
 .hr-container {
     border: 2px solid black;
