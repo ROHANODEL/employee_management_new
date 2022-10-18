@@ -4,10 +4,13 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import SignUp from './components/SignUp';
 import Protected from './components/Protected';
+import {Provider} from 'react-redux';
+import {store} from './store';
 
 function App() {
   return (
     <div>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Protected Component={Dashboard}/>} />
@@ -15,6 +18,7 @@ function App() {
           <Route path='signup' element={<Protected Component={SignUp}/>} />
         </Routes>
       </BrowserRouter>
+      </Provider>
     </div>
   );
 }
