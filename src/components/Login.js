@@ -12,9 +12,11 @@ const Login = () => {
     }
     return (
         <div>
+            
             <div className="mains">
+            <h3>Employee Management System</h3>
                 <div className="logins">
-                    <img className="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgoUQKr4U8JaQ11JmFu83XmscARur-c3n9A&usqp=CAU" alt="" /><br/><br/>
+                    <img className="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH4Ui8-aKNWj9bB8P5rLObzIRt30lQ-wpIOg&usqp=CAU" alt="" /><br/><br/>
                     <input className="inputBox" type=" " placeholder="Enter your Email id" /><br /><br/>
                     <input className="inputBox" type="password" placeholder="Enter your password" /><br /><br/>
 
@@ -23,10 +25,10 @@ const Login = () => {
                             <p className='signnew' onClick={signupClick}>Sign Up</p>
                         </span>
                         <span>
-                            <p>Forgot password ?</p>
+                            <p className='forgotPassword'> Forgot password ? </p>
                         </span> <br />
                     </div><br/>
-                    <button onClick={clickHandler} className="btn-new btn btn-secondary">SUBMIT</button>
+                    <button onClick={clickHandler} className="btn-new btn btn-secondary">Login</button>
                 </div>
             </div>
         </div>
