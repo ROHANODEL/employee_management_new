@@ -14,7 +14,7 @@ const Dashboard = () => {
                 </div>
                 <div className="table container">
                     <table classNameName='table-data' cellspacing="0" cellpadding="5">
-                        {/* <tr>
+                        <tr>
                             <th className="table-th">Sr.no <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
                             <th className="table-th">Name Of Employee <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
                             <th className="table-th">Position <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
@@ -24,7 +24,7 @@ const Dashboard = () => {
                             <th className="table-th">Values <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
                             <th className="table-th">Phone no <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
                             <th className="table-th">Address <a href="#"><i className="fa fa-sort" aria-hidden="true"></i></a></th>
-                        </tr> */}
+                        </tr>
                         <tr>
                             <td className="tableData">01</td>
                             <td className="tableData">Vishal Taral</td>
