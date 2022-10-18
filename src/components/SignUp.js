@@ -9,20 +9,48 @@ const SignUp = () => {
                 <div className="container ">
                     <hr className='hr-container' />
                     <div className='form'>
-                        <h3 className="text">Create Your Account</h3>
+                        <h3 className='txt'>Create Your Account</h3>
                         <br />
 
                         <div className="row-new">
                             <div className="">
-                                <label className="text">Enter name:</label>
+                                <label className='txt'>Enter first Name:</label>
                             </div>
                             <div className="">
-                                <input className='inputBox' type="text" placeholder="Enter User here" /><br />
+                                <input className='inputBox' type="text" placeholder="Enter first name here" /><br />
                             </div>
                         </div>
+
                         <div className="row-new">
                             <div className="">
-                                <label className="text">Enter Email ID:</label>
+                                <label className='txt'>Enter Last Name:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" placeholder="Enter last name here" /><br />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter address:</label>
+                            </div>
+                            <div className="">
+                                <textarea className='inputBox' rows="" cols="50" placeholder="Enter address here" /><br />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter mobile number:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="number" placeholder="Enter mobile number here" /><br />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter Email ID:</label>
                             </div>
                             <div className="">
                                 <input className='inputBox' type="email" placeholder="Enter Email ID here" />
@@ -30,31 +58,32 @@ const SignUp = () => {
                         </div>
 
                         <div className="row-new">
-
                             <div className="">
-                                <label className="text">Enter Username:</label>
+                                <label className='txt'>Enter Username:</label>
                             </div>
                             <div className="">
                                 <input className='inputBox' type="text" placeholder="Enter user name here" /><br />
                             </div>
                         </div>
-                        <div className="row-new">
 
+                        <div className="row-new">
                             <div className="">
-                                <label className="text">Enter Password:</label>
+                                <label className='txt'>Enter Password:</label>
                             </div>
                             <div className="">
                                 <input className='inputBox' type="text" placeholder="Enter password here" /><br />
                             </div>
                         </div>
+
                         <div className="row-new">
                             <div className="">
-                                <label className="text">Enter Confirm Password:</label>
+                                <label className='txt'>Enter Confirm Password:</label>
                             </div>
                             <div className="">
-                                <input className='inputBox' type="text" placeholder="Enter password here" /><br />
+                                <input className='inputBox' type="password" placeholder="Enter password here" /><br />
                             </div>
                         </div><br />
+
                         <button className='btn btn-warning'>Clear Form</button> &emsp;&emsp;&emsp; <a href="../Login/loginPage.html"><button className='btn btn-primary'>Create Account</button></a>
                     </div>
                     <hr className='hr-container' />
