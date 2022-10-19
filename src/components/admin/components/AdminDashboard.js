@@ -1,7 +1,23 @@
-import React from 'react'
-import '../style/dashboard.scss'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+import { getdata } from '../../../reducers/adminReducer'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import '../style/adminDashboard.scss';
 
-const Dashboard = () => {
+const AdminDashboard = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const dispatch = useDispatch();
+    const updateVal = useSelector((state) => state.admin.adminData)
+    console.log(updateVal)
+    const updateHandler = () => {
+        dispatch(getdata())
+    }
+
     return (
         <div class="first">
             <div class="container custom-button">
@@ -29,7 +45,6 @@ const Dashboard = () => {
                         <th class="tableData">Address <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Upadate<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Delete<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
-
                     </tr>
                     <tr>
                         <td class="tableData">01</td>
@@ -43,7 +58,6 @@ const Dashboard = () => {
                         <td class="tableData">balaji nagar, nerhe 411041</td>
                         <td class="tableData "><botton class="btn btn-success btn-sm">update</botton></td>
                         <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
-
                     </tr>
                     <tr>
                         <td class="tableData">02</td>
@@ -55,15 +69,37 @@ const Dashboard = () => {
                         <td class="tableData">male</td>
                         <td class="tableData">9168454580</td>
                         <td class="tableData">katraj</td>
-                        <td class="tableData "><botton class="btn btn-success btn-sm">update</botton></td>
+                        <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
                         <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
-
-
                     </tr>
                 </table>
             </div>
+
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-custom-modal-styling-title">
+                        Custom Modal Styling
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>
+                        Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+                        commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+                        ipsam atque a dolores quisquam quisquam adipisci possimus
+                        laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+                        accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+                        reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+                        deleniti rem!
+                    </p>
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }
 
-export default Dashboard
+export default AdminDashboard
