@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Protected Component={AdminDashboard}/>} />
-          <Route path='/login' element=<Login/> />
+          <Route path='/login' element={<Login/>} />
           <Route path='signup' element={<Protected Component={SignUp}/>} />
         </Routes>
       </BrowserRouter>
