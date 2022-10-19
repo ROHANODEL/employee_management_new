@@ -1,0 +1,52 @@
+.first {
+    margin-top: 3%;
+  
+    .container {
+      width: 1200px;
+      margin: auto;
+    }
+  
+    .custom-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .search {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+  
+    .table {
+      margin-top: 1rem;
+      border-collapse: collapse;
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+  
+      .tableData {
+        border: 0.5px solid black;
+        margin-top: 5px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: antiquewhite;
+      }
+  
+      i {
+        color: black;
+      }
+  
+      .updateOrDeleteBottun {
+        border: 0.5px solid black;
+      }
+    }
+  }
+  
+  .modal-90w {
+    min-width: 50%;
+  }
+  
