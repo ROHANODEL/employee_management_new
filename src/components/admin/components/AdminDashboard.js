@@ -4,9 +4,12 @@ import { getdata } from '../../../reducers/adminReducer'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../style/adminDashboard.scss';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -18,10 +21,14 @@ const AdminDashboard = () => {
         dispatch(getdata())
     }
 
+    const addHandler = () => {
+        navigate('./addemp')
+    }
+
     return (
         <div class="first">
             <div class="container custom-button">
-                <button class="btn btn-primary" type="button">Add Fields</button>
+                <button class="btn btn-primary" type="button" onClick={addHandler}>Add Fields</button>
             </div>
 
             <div class="search container" >

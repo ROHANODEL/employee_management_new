@@ -6,6 +6,7 @@ import Protected from './components/Protected';
 import {Provider} from 'react-redux';
 import {store} from './store';
 import AdminDashboard from './components/admin/components/AdminDashboard';
+import AddEmp from './components/admin/components/AddEmp';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Protected Component={AdminDashboard}/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='signup' element={<Protected Component={SignUp}/>} />
+          <Route path='/addemp' element={<AddEmp/>} />
         </Routes>
       </BrowserRouter>
       </Provider>
