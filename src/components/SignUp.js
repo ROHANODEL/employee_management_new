@@ -9,7 +9,7 @@ const SignUp = () => {
                 <div className="container ">
                     <hr className='hr-container' />
                     <div className='form'>
-                        <h3 className='txt'>Create Your Account</h3>
+                        <h3 className='txt'>Create Admin Account</h3>
                         <br />
 
                         <div className="row-new">
@@ -54,6 +54,15 @@ const SignUp = () => {
                             </div>
                             <div className="">
                                 <input className='inputBox' type="email" placeholder="Enter Email ID here" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter Company Name:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" placeholder="Enter Company Name here" />
                             </div>
                         </div>
 
