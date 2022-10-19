@@ -58,7 +58,25 @@
   }
 
   .inputBox{
-    height: 30px;
-    
+    height: 32px;
   }
+
+  .RadioButton{
+    margin-left: 30px;
+  }
+
+  .Gender{
+    display: flex;
+    margin-left: 30px;
+    word-spacing: 30px;
+  }
+
+  .body-btn{
+    display: flex;
+    justify-content: center;
+    .update-button{
+      margin-top: 1rem;
+    }
+  }
+
 }
