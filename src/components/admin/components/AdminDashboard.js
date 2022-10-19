@@ -30,9 +30,9 @@ const AdminDashboard = () => {
             </div>
 
 
-            <div class="table container">
+            <div class="EmpDetail container">
 
-                <table cellspacing="0" cellpadding="5">
+                <table className='EmpTable' cellspacing="0" cellpadding="5">
                     <tr>
                         <th class="tableData">Sr.no <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Name Of Employee <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
@@ -83,19 +83,87 @@ const AdminDashboard = () => {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-custom-modal-styling-title">
-                        Custom Modal Styling
+                        Upadate Employee Profile
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>
-                        Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-                        commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-                        ipsam atque a dolores quisquam quisquam adipisci possimus
-                        laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-                        accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-                        reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-                        deleniti rem!
-                    </p>
+                    <div className='formToUpdate'>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter Employee Name:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Role Of Employee:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Joining date:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="date" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Experience:</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Employee Salary :</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" />
+                            </div>
+                        </div>
+
+                        
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Gender :</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="text" />
+                            </div>
+                        </div>
+
+                        
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Phone Number :</label>
+                            </div>
+                            <div className="">
+                                <input className='inputBox' type="number" />
+                            </div>
+                        </div>
+
+                        <div className="row-new">
+                            <div className="">
+                                <label className='txt'>Enter address:</label>
+                            </div>
+                            <div className="">
+                                <textarea className='inputBox' rows="" cols="50" /><br />
+                            </div>
+                        </div>
+
+                    </div>
                 </Modal.Body>
             </Modal>
         </div>
