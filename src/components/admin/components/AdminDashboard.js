@@ -146,8 +146,14 @@ const AdminDashboard = () => {
                             <div className="">
                                 <label className='txt'>Gender :</label>
                             </div>
-                            <div className="">
-                                <input className='inputBox' type="text" />
+                            <div className="Gender">
+                                <input  type="radio" />
+                                <lable>Male</lable>&emsp;
+                                
+                                <input type="radio" />
+                                <lable>Female</lable>
+                                
+                                
                             </div>
                         </div>
 
@@ -168,6 +174,10 @@ const AdminDashboard = () => {
                             <div className="">
                                 <textarea className='inputBox' rows="" cols="50" /><br />
                             </div>
+                        </div>
+
+                        <div className='body-btn'>
+                            <button className='btn btn-primary  update-button'>UPDATE</button>
                         </div>
 
                     </div>
