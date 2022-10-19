@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../style/adminDashboard.scss';
 import { useNavigate } from 'react-router-dom';
+import data from '../mock/adminDashboard.json'
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
@@ -53,32 +54,23 @@ const AdminDashboard = () => {
                         <th class="tableData">Upadate<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Delete<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                     </tr>
-                    <tr>
-                        <td class="tableData">01</td>
-                        <td class="tableData">Vishal Taral</td>
-                        <td class="tableData">Web Developer</td>
-                        <td class="tableData">26 <sup>th</sup>September</td>
-                        <td class="tableData">1 month</td>
-                        <td class="tableData">15,000</td>
-                        <td class="tableData">male</td>
-                        <td class="tableData">9176000080</td>
-                        <td class="tableData">balaji nagar, nerhe 411041</td>
-                        <td class="tableData "><botton class="btn btn-success btn-sm">update</botton></td>
-                        <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
-                    </tr>
-                    <tr>
-                        <td class="tableData">02</td>
-                        <td class="tableData">Rohan Odel</td>
-                        <td class="tableData">Web Developer</td>
-                        <td class="tableData">26 <sup>th</sup>February</td>
-                        <td class="tableData">9 month</td>
-                        <td class="tableData">30,000</td>
-                        <td class="tableData">male</td>
-                        <td class="tableData">9168454580</td>
-                        <td class="tableData">katraj</td>
-                        <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
-                        <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
-                    </tr>
+                    {
+                        data.tabledata.map((newdata) => (
+                            <tr>
+                                <td class="tableData">{newdata.id}</td>
+                                <td class="tableData">{newdata.name}</td>
+                                <td class="tableData">{newdata.roll}</td>
+                                <td class="tableData">{newdata.join_date}</td>
+                                <td class="tableData">{newdata.experience}</td>
+                                <td class="tableData">{newdata.salary}</td>
+                                <td class="tableData">{newdata.gender}</td>
+                                <td class="tableData">{newdata.phone_number}</td>
+                                <td class="tableData">{newdata.address}</td>
+                                <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
+                                <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
+                            </tr>
+                        ))
+                    }
                 </table>
             </div>
 
@@ -141,7 +133,7 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        
+
                         <div className="row-new">
                             <div className="">
                                 <label className='txt'>Gender :</label>
@@ -151,7 +143,7 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        
+
                         <div className="row-new">
                             <div className="">
                                 <label className='txt'>Phone Number :</label>
