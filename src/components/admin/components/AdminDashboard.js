@@ -1,26 +1,35 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { getdata } from '../../../reducers/adminReducer'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import '../style/adminDashboard.scss';
 import { useNavigate } from 'react-router-dom';
 import data from '../mock/adminDashboard.json'
+import AddEmp from './AddEmp';
+import UpdateData from './UpdateData';
+import DeleteEmp from './DeleteEmp';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
-
+    const [closeShow, setCloseShow] =useState(false);
     const navigate = useNavigate();
 
-    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    const dispatch = useDispatch();
-    const updateVal = useSelector((state) => state.admin.adminData)
-    console.log(updateVal)
-    const updateHandler = () => {
-        dispatch(getdata())
+    const closeBtn = () => {
+        setShow(false)
     }
+
+    const handleDelete = () => setCloseShow(true);
+    const deleteClose = () => {
+        setCloseShow(false)
+    }
+
+    // const dispatch = useDispatch();
+    // const updateVal = useSelector((state) => state.admin.adminData)
+    // console.log(updateVal)
+    
+    // const updateHandler = () => {
+    //     dispatch(getdata())
+    // }
 
     const addHandler = () => {
         navigate('./addemp')
@@ -67,112 +76,17 @@ const AdminDashboard = () => {
                                 <td class="tableData">{newdata.phone_number}</td>
                                 <td class="tableData">{newdata.address}</td>
                                 <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
-                                <td class="tableData"><botton class="btn btn-danger btn-sm">delete</botton></td>
+                                <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>delete</botton></td>
                             </tr>
                         ))
                     }
                 </table>
             </div>
+            
+            <UpdateData closeBtn={closeBtn} show={show} />
 
-            <Modal
-                show={show}
-                onHide={() => setShow(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="example-custom-modal-styling-title"
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title id="example-custom-modal-styling-title">
-                        Upadate Employee Profile
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <div className='formToUpdate'>
+            <DeleteEmp deleteClose={deleteClose} closeShow={closeShow}/>
 
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Enter Employee Name:</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="text" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Role Of Employee:</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="text" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Joining date:</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="date" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Experience:</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="text" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Employee Salary :</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="text" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Gender :</label>
-                            </div>
-                            <div className="Gender">
-                                <input  type="radio" />
-                                <lable>Male</lable>&emsp;
-                                
-                                <input type="radio" />
-                                <lable>Female</lable>
-                                
-                                
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Phone Number :</label>
-                            </div>
-                            <div className="">
-                                <input className='inputBox' type="number" />
-                            </div>
-                        </div>
-
-                        <div className="row-new">
-                            <div className="">
-                                <label className='txt'>Enter address:</label>
-                            </div>
-                            <div className="">
-                                <textarea className='inputBox' rows="" cols="50" /><br />
-                            </div>
-                        </div>
-
-                        <div className='body-btn'>
-                            <button className='btn btn-primary  update-button'>UPDATE</button>
-                        </div>
-
-                    </div>
-                </Modal.Body>
-            </Modal>
         </div>
     )
 }
