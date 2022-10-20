@@ -10,7 +10,7 @@ import AddEmp from './components/admin/components/AddEmp';
 
 function App() {
   return (
-    <div>
+    <div className='app-main'>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
