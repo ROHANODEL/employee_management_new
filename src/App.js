@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {store} from './store';
 import AdminDashboard from './components/admin/components/AdminDashboard';
 import AddEmp from './components/admin/components/AddEmp';
+import EmpDashboard from './components/employee/components/EmpDashboard';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='signup' element={<SignUp/>} />
           <Route path='/addemp' element={<Protected Component={AddEmp} />} />
+          <Route path='/dashboard' element={<Protected Component={EmpDashboard} />} />
         </Routes>
       </BrowserRouter>
       </Provider>
