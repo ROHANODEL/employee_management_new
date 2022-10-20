@@ -40,7 +40,7 @@ const AdminDashboard = () => {
 
             <div class="EmpDetail container">
 
-                <table className='EmpTable' cellspacing="0" cellpadding="5">
+                <table className='EmpTable table-responsive' cellspacing="0" cellpadding="5">
                     <tr>
                         <th class="tableData">Sr.no <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Name Of Employee <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
@@ -133,7 +133,6 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-
                         <div className="row-new">
                             <div className="">
                                 <label className='txt'>Gender :</label>
@@ -148,7 +147,6 @@ const AdminDashboard = () => {
                                 
                             </div>
                         </div>
-
 
                         <div className="row-new">
                             <div className="">
