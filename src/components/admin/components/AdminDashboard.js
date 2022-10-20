@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import data from '../mock/adminDashboard.json'
 import AddEmp from './AddEmp';
 import UpdateData from './UpdateData';
-import DeleteEmp from './DeleteEmp';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
@@ -18,9 +17,8 @@ const AdminDashboard = () => {
         setShow(false)
     }
 
-    const handleDelete = () => setCloseShow(true);
-    const deleteClose = () => {
-        setCloseShow(false)
+    const handleDelete = () => {
+        window.confirm('Delete the item')
     }
 
     // const dispatch = useDispatch();
@@ -84,8 +82,6 @@ const AdminDashboard = () => {
             </div>
             
             <UpdateData closeBtn={closeBtn} show={show} />
-
-            <DeleteEmp deleteClose={deleteClose} closeShow={closeShow}/>
 
         </div>
     )
