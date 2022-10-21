@@ -28,9 +28,6 @@ const EmpDashboard = () => {
             <label className='info'>CSS</label><br/>
             <label className='info'>Javascript</label><br/>
           </div>  
-          <div>
-            <button className='btn btn-info massage-button'>Send Massage</button>
-          </div>
         </div>
         <hr></hr>
       </div>
