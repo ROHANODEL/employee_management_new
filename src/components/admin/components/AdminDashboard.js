@@ -30,7 +30,11 @@ const AdminDashboard = () => {
     // }
 
     const addHandler = () => {
-        navigate('./addemp')
+        navigate('/addemp')
+    }
+
+    const handleInfo = () => {
+        navigate('/info')
     }
 
     return (
@@ -76,7 +80,8 @@ const AdminDashboard = () => {
                                 <td class="tableData">{newdata.address}</td>
                                 <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
                                 <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>delete</botton></td>
-                                <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>Info</botton></td>
+                                <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleInfo}>Info</botton></td>
+                                
                             </tr>
                         ))
                     }

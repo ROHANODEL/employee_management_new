@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/empDashboard.scss'
+import '../style/infoPage.scss'
 
 const EmpDashboard = () => {
   return (
