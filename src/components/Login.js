@@ -8,7 +8,7 @@ const Login = () => {
         password: ''
     });
     useEffect(() => {
-        let login = localStorage.getItem('login')
+        let login = localStorage.getItem('systemLogin')
         if (login) {
             navigate('/')
         }
@@ -26,7 +26,7 @@ const Login = () => {
     }
     const login = () => {
         if(inputData.email === 'rohanodel1997@gmail.com' && inputData.password === '12345'){
-        localStorage.setItem('login', true)
+        localStorage.setItem('systemLogin', true)
         navigate('/')
         }
     }

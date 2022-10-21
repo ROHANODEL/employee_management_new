@@ -17,13 +17,13 @@ const UpdateData = (props) => {
     }
     const validationSchema = yup.object({
         name: yup.string().required('name is required'),
-        role: yup.string().required('role of employee'),
-        join_data: yup.string().required('joining date'),
+        role: yup.string().required('role of employee required'),
+        join_data: yup.string().required('joining date required'),
         experience: yup.string().required('please enter experience'),
         salary: yup.string().required('employee salary required'),
         gender: yup.string().required('please select gender'),
-        phone: yup.string().required('please enter phone number'),
-        address: yup.string().required('please enter address')
+        phone: yup.string().required('phone number is required'),
+        address: yup.string().required('address is required')
     })
     const submitHandler = (val) => {
         console.log(val)
@@ -52,7 +52,7 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name='name' className='inputBox' type="text" />
-                                            <div style={{paddingLeft:'2rem',width:'290px'}}>
+                                            <div className='err-msg' >
                                             <ErrorMessage name='name' />
                                             </div>
                                         </div>
@@ -63,7 +63,9 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name='role' className='inputBox' type="text" />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='role' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row-new">
@@ -72,7 +74,9 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name='join_data' className='inputBox' type="date" />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='join_data' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row-new">
@@ -81,7 +85,9 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name="experience" className='inputBox' type="text" />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='experience' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row-new">
@@ -90,7 +96,9 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name='salary' className='inputBox' type="text" />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='salary' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row-new">
@@ -98,11 +106,13 @@ const UpdateData = (props) => {
                                             <label className='txt'>Gender :</label>
                                         </div>
                                         <div className="Gender">
-                                            <Field type="radio" name='gender' />
+                                            <Field type="radio" name='gender' value='male' />
                                             <lable>Male</lable>&emsp;
 
-                                            <Field type="radio" name='gender' />
+                                            <Field type="radio" name='gender' value='female' />
                                             <lable>Female</lable>
+                                        </div>
+                                        <div className='new-err-msg' >
                                             <ErrorMessage name='gender' />
                                         </div>
                                     </div>
@@ -112,7 +122,9 @@ const UpdateData = (props) => {
                                         </div>
                                         <div className="">
                                             <Field name='phone' className='inputBox' type="number" />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='phone' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row-new">
@@ -120,8 +132,10 @@ const UpdateData = (props) => {
                                             <label className='txt'>Enter address:</label>
                                         </div>
                                         <div className="">
-                                            <textarea name='address' className='inputBox' rows="" cols="50" /><br />
+                                            <Field name='address' className='inputBox' rows="" cols="50" /><br />
+                                            <div className='err-msg' >
                                             <ErrorMessage name='address' />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='body-btn'>
