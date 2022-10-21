@@ -60,6 +60,7 @@ const AdminDashboard = () => {
                         <th class="tableData">Address <a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Upadate<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                         <th class="tableData">Delete<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
+                        <th class="tableData">Informaion<a href="#"><i class="fa fa-sort" aria-hidden="true"></i></a></th>
                     </tr>
                     {
                         data.tabledata.map((newdata) => (
@@ -75,6 +76,7 @@ const AdminDashboard = () => {
                                 <td class="tableData">{newdata.address}</td>
                                 <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
                                 <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>delete</botton></td>
+                                <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>Info</botton></td>
                             </tr>
                         ))
                     }
