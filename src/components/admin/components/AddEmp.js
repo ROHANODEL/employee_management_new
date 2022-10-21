@@ -197,7 +197,7 @@ const AddEmp = () => {
                             </div>
 
                             <div className='body-btn'>
-                                <button className='btn btn-primary  update-button'>UPDATE</button>
+                                <button className='btn btn-primary  update-button'>submit</button>
                             </div>
 
                         </div>
