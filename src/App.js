@@ -8,6 +8,7 @@ import {store} from './store';
 import AdminDashboard from './components/admin/components/AdminDashboard';
 import AddEmp from './components/admin/components/AddEmp';
 import EmpDashboard from './components/employee/components/EmpDashboard';
+import InfoPage from './components/admin/components/InfoPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='signup' element={<SignUp/>} />
           <Route path='/addemp' element={<Protected Component={AddEmp} />} />
           <Route path='/dashboard' element={<Protected Component={EmpDashboard} />} />
+          <Route path='/info' element={<Protected Component={InfoPage} />} />
         </Routes>
       </BrowserRouter>
       </Provider>
