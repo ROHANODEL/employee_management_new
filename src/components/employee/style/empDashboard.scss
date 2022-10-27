@@ -1,33 +1,74 @@
-$color: #c6538c;
-.Emp-dashboard {
-    width: 100%;
-    height: 45rem;
-    margin: auto;
-    padding: 3rem;
+.main-div {
     background-color: rgb(206, 244, 244);
-    padding-left: 14rem;
-    .outer{
-        display: flex;
-    }
-    .massage-button{
-        margin-left: 3rem;
-    }
-    .profile-image {
-        height:200px;
-        width: 200px;
-        border-radius: 50%;
-        .img-style{
-            border-radius: 50%;
-            border: 1px solid black;
+    width: 100vw;
+    height: 100vh;
+
+    .emp-dashboard {
+        .outer-first {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            border-radius: 20px;
+
+            .emp-info {
+                margin-left: 2rem;
+            }
+
+            .leave {
+                margin-left: 5rem;
+
+                .leave-count {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .emp-leave {
+                        width: 250px;
+                        height: 70px;
+                        padding: 0.5rem;
+                        background-color: burlywood;
+                        border-radius: 3px;
+                    }
+
+                    .one {
+                        margin-left: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        .outer-second {
+            display: flex;
+            margin-top: 0.5rem;
+
+            .payment-info {
+                width: 90vw;
+                height: 50vh;
+                background-color: #d1d8e0;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                padding: 1rem;
+            }
+
+            .activities {
+                width: 43vw;
+                height: 50vh;
+                background-color: #d1d8e0;
+                margin-left: 0.5rem;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                padding: 1rem;
+
+                .activity-button {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .leave-button {
+                        background-color: #8854d0;
+                    }
+                }
+            }
+
         }
     }
-    .emp-info {
-        margin-left: 50px;
-        .heading{
-            color: $color;
-        }
-        .info{
-            margin-left: 3rem;
-        }
-    }
+
 }
