@@ -6,14 +6,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const UpdateData = (props) => {
     const initialValues = {
-        name: "",
-        role: "",
-        join_data: "",
-        experience: "",
-        salary: "",
-        gender: "",
-        phone: "",
-        address: ""
+        ...props.allval
     }
     const validationSchema = yup.object({
         name: yup.string().required('name is required'),
@@ -121,9 +114,9 @@ const UpdateData = (props) => {
                                             <label className='txt'>Phone Number :</label>
                                         </div>
                                         <div className="">
-                                            <Field name='phone' className='inputBox' type="number" />
+                                            <Field name='phone_number' className='inputBox' type="number" />
                                             <div className='err-msg' >
-                                            <ErrorMessage name='phone' />
+                                            <ErrorMessage name='phone_number' />
                                             </div>
                                         </div>
                                     </div>

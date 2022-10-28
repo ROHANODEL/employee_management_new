@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../style/login.scss'
+import '../../style/login.scss'
 
 const Login = () => {
     const [inputData, setInputData] = useState({

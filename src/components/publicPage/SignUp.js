@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../style/signup.scss'
+import '../../style/signup.scss'
 import * as yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 

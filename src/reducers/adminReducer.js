@@ -8,8 +8,8 @@ const adminReducer = createSlice ({
     name:'adminPage',
     initialState,
     reducers:{
-        getdata: (state) => {
-            state.adminData = 'new data'
+        getdata: (state, payload) => {
+            state.adminData = payload
         }
     }
 })
