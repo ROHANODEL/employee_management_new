@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../style/empDashboard.scss'
 import data from '../mock/empDashboard.json'
-import BalanceInfo from './BalanceInfo';
+import LeaveBalance from './LeaveBalance';
 
 const EmpDashboard = () => {
   const [show, setShow] = useState(false);
@@ -96,7 +96,7 @@ const EmpDashboard = () => {
         </div>
       </div>
 
-      <BalanceInfo closeBtn={closeBtn} show={show} />
+      <LeaveBalance closeBtn={closeBtn} show={show} />
 
     </div>
 
