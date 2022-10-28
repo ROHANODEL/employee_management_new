@@ -3,31 +3,42 @@ import '../style/empDashboard.scss'
 import data from '../mock/empDashboard.json'
 import LeaveBalance from './LeaveBalance';
 import PaymentInfo from './PaymentInfo';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const EmpDashboard = () => {
+  
   const [show, setShow] = useState(false);
   const [newshow, setNewshow] = useState(false);
 
+  const navigate = useNavigate();
+
   const newdate = new Date();
 
-  const date =  newdate.getDate();
-  const month =  newdate.getMonth()+1;
-  const year =  newdate.getFullYear()
+  const date = newdate.getDate();
+  const month = newdate.getMonth() + 1;
+  const year = newdate.getFullYear()
 
   const balanceDetails = () => {
     setShow(true)
   }
   const closeBtn = () => {
     setShow(false)
-  } 
+  }
 
-const paymentsInfo = () => {
-  setNewshow(true)
-}
+  const paymentsInfo = () => {
+    setNewshow(true)
+  }
+  const paymentClose = () => {
+    setNewshow(false)
+  }
 
-const paymentClose = () => {
-  setNewshow(false)
-}
+  const profileNew = () => {
+    navigate('/profile')
+  }
+
+  const teamNaw = () => {
+    navigate('/team')
+  }
 
   return (
     <div className='main-div'>
@@ -43,12 +54,12 @@ const paymentClose = () => {
 
           <div className='emp-info'>
             <label className='emp-name'>Rohan odel</label><br /><br />
-            <button className='btn btn-primary'>My profile</button><br /><br />
-            <button className='btn btn-primary'>My Team</button>
+            <button className='btn btn-primary' onClick={profileNew}>My profile</button><br /><br />
+            <button className='btn btn-primary' onClick={teamNaw}>My Team</button>
           </div>
 
           <div className='leave col'>
-            <h6>Leave Balance as of {date+'/'+month+'/'+year}</h6><br />
+            <h6>Leave Balance as of {date + '/' + month + '/' + year}</h6><br />
             <div className='leave-count'>
               <div className='emp-leave col'>
                 <div>Vacation Leave in this month :</div>
@@ -61,7 +72,7 @@ const paymentClose = () => {
               </div>
 
               <div className='emp-leave col one'>
-                <div>Total Vacation Holdind days :</div>
+                <div>Total Vacation Holding days :</div>
                 <div class="badge">5 days</div>
               </div>
 
@@ -75,14 +86,14 @@ const paymentClose = () => {
           <div className='payment-info'>
             <table class="table table-active">
               <tbody>
-              {
-                data.infoemp.map((val)=>(
-                  <tr>
-                  <th scope="row">{val.data}</th>
-                  <td>{val.detail}</td>
-                </tr>
-                ))
-              }
+                {
+                  data.infoemp.map((val) => (
+                    <tr>
+                      <th scope="row">{val.data}</th>
+                      <td>{val.detail}</td>
+                    </tr>
+                  ))
+                }
 
               </tbody>
             </table>
@@ -105,7 +116,7 @@ const paymentClose = () => {
       </div>
 
       <LeaveBalance closeBtn={closeBtn} show={show} />
-      <PaymentInfo paymentClose={paymentClose} newShow={newshow}/>
+      <PaymentInfo paymentClose={paymentClose} newShow={newshow} />
 
     </div>
 
