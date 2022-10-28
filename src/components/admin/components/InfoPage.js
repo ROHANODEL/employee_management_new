@@ -7,14 +7,15 @@ const EmpDashboard = () => {
   const updateVal = useSelector((state) => state.admin.adminData.payload)
 
   return (
-    
-      <div className='Emp-dashboard col-xs-12'>
-        <div className='outer'>
-          <div className='profile-image '>
-          <img src={require('../../../images/imgfirst.jpg')} className='img-style'/>
-          </div>
 
-          <div className='emp-info'>
+
+    <div className='info-page col-xs-12'>
+      <div className='outer'>
+        <div className='profile-image '>
+          <img src={require('../../../images/imgfirst.jpg')} className='img-style' />
+        </div>
+
+        <div className='emp-info'>
             <span><h3>{updateVal.name}</h3></span>
             <h5>{updateVal.role}</h5>
             <hr></hr>
@@ -32,9 +33,14 @@ const EmpDashboard = () => {
             <label className='info'>CSS</label><br/>
             <label className='info'>Javascript</label><br/>
           </div>  
+        <div>
+          <botton class="btn btn-primary btn-sm">Edit</botton>
+
         </div>
-        <hr></hr>
+        
       </div>
+      <hr></hr>
+    </div>
 
   )
 }
