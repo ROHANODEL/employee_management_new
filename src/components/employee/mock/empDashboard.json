@@ -1,0 +1,24 @@
+{
+    "infoemp":[
+        {
+            "data":"Payment Information",
+            "detail":"Details"
+        },
+        {
+            "data":"Salary package",
+            "detail":"1.8 LPA"
+        },
+        {
+            "data":"Last Paid salary date",
+            "detail":"21/10/2022"
+        },
+        {
+            "data":"In hand salary",
+            "detail":"13,000"
+        },
+        {
+            "data":"Taxes",
+            "detail":"2,000"
+        }
+    ]
+}

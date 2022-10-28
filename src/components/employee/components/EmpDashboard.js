@@ -1,7 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../style/empDashboard.scss'
+import data from '../mock/empDashboard.json'
+import BalanceInfo from './BalanceInfo';
 
 const EmpDashboard = () => {
+  const [show, setShow] = useState(false);
+
+  const newdate = new Date();
+
+  const date =  newdate.getDate();
+  const month =  newdate.getMonth();
+  const year =  newdate.getFullYear()
+
+  const balanceDetails = () => {
+    setShow(true)
+  }
+
+  const closeBtn = () => {
+    setShow(false)
+}
+
   return (
     <div className='main-div'>
       <div className='emp-dashboard container'>
@@ -15,31 +33,31 @@ const EmpDashboard = () => {
           </div>
 
           <div className='emp-info'>
-            <label className='emp-name'>Vishal S. Taral</label><br /><br />
+            <label className='emp-name'>Rohan odel</label><br /><br />
             <button className='btn btn-primary'>My profile</button><br /><br />
             <button className='btn btn-primary'>My Team</button>
           </div>
 
           <div className='leave col'>
-            <h6>Leave Balance as of 21/10/2022</h6><br />
+            <h6>Leave Balance as of {date+'/'+month+'/'+year}</h6><br />
             <div className='leave-count'>
               <div className='emp-leave col'>
-                <label>Vacation Leave in this month :</label>
-                <span class="badge">5 days</span>
+                <div>Vacation Leave in this month :</div>
+                <div class="badge">5 days</div>
               </div>
 
               <div className='emp-leave col one'>
-                <label>Sick Leave in this month :</label>
-                <span class="badge">5 days</span>
+                <div>Sick Leave in this month :</div>
+                <div class="badge">5 days</div>
               </div>
 
               <div className='emp-leave col one'>
-                <label>Vacation Holdind Account in days :</label>
-                <span class="badge">5 days</span>
+                <div>Total Vacation Holdind days :</div>
+                <div class="badge">5 days</div>
               </div>
 
             </div>
-            <a href='#'>Full Leave Balance Information</a>
+            <a href='#' onClick={balanceDetails}>Full Leave Balance Information</a>
           </div>
 
         </div>
@@ -47,48 +65,15 @@ const EmpDashboard = () => {
         <div className='outer-second'>
           <div className='payment-info'>
             <table class="table table-active">
-              {/* <thead>
-                <tr>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-                </tr>
-              </thead> */}
               <tbody>
-                <tr>
-                  <th scope="row">Payment Information</th>
-                  <td>Mark</td>
+              {
+                data.infoemp.map((val)=>(
+                  <tr>
+                  <th scope="row">{val.data}</th>
+                  <td>{val.detail}</td>
                 </tr>
-
-                <tr>
-                  <th scope="row">Last Paid date:</th>
-                  <td><a href='#'> 21/10/2022 </a></td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Earning</th>
-                  <td>Mark</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Benefits</th>
-                  <td>Mark</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Taxes</th>
-                  <td>Mark</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Job Summary</th>
-                  <td>Mark</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Employee Summary</th>
-                  <td>Mark</td>
-                </tr>
+                ))
+              }
 
               </tbody>
             </table>
@@ -110,6 +95,9 @@ const EmpDashboard = () => {
 
         </div>
       </div>
+
+      <BalanceInfo closeBtn={closeBtn} show={show} />
+
     </div>
 
   )
