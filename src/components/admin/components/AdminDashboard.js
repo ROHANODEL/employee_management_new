@@ -10,9 +10,14 @@ import UpdateData from './UpdateData';
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
     const [closeShow, setCloseShow] =useState(false);
+    const [allval ,setAllval] = useState()
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const handleShow = () => setShow(true);
+    const handleShow = (val) => {
+        setShow(true);
+        setAllval(val)
+    }
     const closeBtn = () => {
         setShow(false)
     }
@@ -20,6 +25,8 @@ const AdminDashboard = () => {
     const handleDelete = () => {
         window.confirm('Delete the item')
     }
+
+
 
     // const dispatch = useDispatch();
     // const updateVal = useSelector((state) => state.admin.adminData)
@@ -33,8 +40,9 @@ const AdminDashboard = () => {
         navigate('/addemp')
     }
 
-    const handleInfo = () => {
+    const handleInfo = (newval) => {
         navigate('/info')
+        dispatch(getdata(newval))
     }
 
     return (
@@ -71,24 +79,23 @@ const AdminDashboard = () => {
                             <tr>
                                 <td class="tableData">{newdata.id}</td>
                                 <td class="tableData">{newdata.name}</td>
-                                <td class="tableData">{newdata.roll}</td>
+                                <td class="tableData">{newdata.role}</td>
                                 <td class="tableData">{newdata.join_date}</td>
                                 <td class="tableData">{newdata.experience}</td>
                                 <td class="tableData">{newdata.salary}</td>
                                 <td class="tableData">{newdata.gender}</td>
                                 <td class="tableData">{newdata.phone_number}</td>
                                 <td class="tableData">{newdata.address}</td>
-                                <td class="tableData "><botton class="btn btn-success btn-sm" onClick={handleShow}>update</botton></td>
+                                <td class="tableData "><botton class="btn btn-success btn-sm" onClick={()=>handleShow(newdata)}>update</botton></td>
                                 <td class="tableData"><botton class="btn btn-danger btn-sm" onClick={handleDelete}>delete</botton></td>
-                                <td class="tableData"><botton class="btn btn-secondary btn-sm" onClick={handleInfo}>Info</botton></td>
-                                
+                                <td class="tableData"><botton class="btn btn-secondary btn-sm" onClick={()=>handleInfo(newdata)}>Info</botton></td>
                             </tr>
                         ))
                     }
                 </table>
             </div>
             
-            <UpdateData closeBtn={closeBtn} show={show} />
+            <UpdateData closeBtn={closeBtn} show={show} allval={allval}/>
 
         </div>
     )

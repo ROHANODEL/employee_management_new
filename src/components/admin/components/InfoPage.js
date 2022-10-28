@@ -1,7 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import '../style/infoPage.scss'
 
 const EmpDashboard = () => {
+
+  const updateVal = useSelector((state) => state.admin.adminData.payload)
+
   return (
     
       <div className='Emp-dashboard col-xs-12'>
@@ -11,17 +15,17 @@ const EmpDashboard = () => {
           </div>
 
           <div className='emp-info'>
-            <span><h3>Vishal Taral</h3></span>
-            <h5>Web developer</h5>
+            <span><h3>{updateVal.name}</h3></span>
+            <h5>{updateVal.role}</h5>
             <hr></hr>
             <label className='heading'>Contact Information</label><br/>
-            <label className='info'>Phone:    7767034533</label><br/>
-            <label className='info'>Address: At: Kauli Tal: Soygaon Dist:Aurangabad Pin: 431120</label><br/>
-            <label className='info'>Email:    vishaltaral</label><br/>
+            <label className='info'>Phone:    {updateVal.phone_number}</label><br/>
+            <label className='info'>Address: {updateVal.address}</label><br/>
+            <label className='info'>Email:    -------</label><br/>
             <hr></hr>
             <label className='heading'>Basic Information</label><br/>
-            <label className='info'>Gender:    Male</label><br/>
-            <label className='info'>Birth Date:    14 Dec 1997</label><br/>
+            <label className='info'>Gender:    {updateVal.gender}</label><br/>
+            <label className='info'>Birth Date:    ----------</label><br/>
             <hr></hr>
             <label className='heading'>Skills</label><br/>
             <label className='info'>HTML</label><br/>
