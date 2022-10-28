@@ -20,7 +20,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Protected Component={AdminDashboard}/>} />
+          <Route path='/' element={<Protected Component={EmpDashboard}/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/addemp' element={<Protected Component={AddEmp} />} />
