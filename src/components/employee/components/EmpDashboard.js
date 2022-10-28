@@ -80,10 +80,10 @@ const EmpDashboard = () => {
                   <td>Mark</td>
                 </tr>
 
-                <tr>
+                {/* <tr>
                   <th scope="row">Job Summary</th>
                   <td>Mark</td>
-                </tr>
+                </tr> */}
 
                 <tr>
                   <th scope="row">Employee Summary</th>
