@@ -2,22 +2,31 @@ import React, { useState } from 'react'
 import '../style/empDashboard.scss'
 import data from '../mock/empDashboard.json'
 import BalanceInfo from './BalanceInfo';
+import PaymentInfo from './PaymentInfo';
 
 const EmpDashboard = () => {
   const [show, setShow] = useState(false);
+  const [newshow, setNewshow] = useState(false);
 
   const newdate = new Date();
 
   const date =  newdate.getDate();
-  const month =  newdate.getMonth();
+  const month =  newdate.getMonth()+1;
   const year =  newdate.getFullYear()
 
   const balanceDetails = () => {
     setShow(true)
   }
-
   const closeBtn = () => {
     setShow(false)
+  } 
+
+const paymentsInfo = () => {
+  setNewshow(true)
+}
+
+const paymentClose = () => {
+  setNewshow(false)
 }
 
   return (
@@ -77,18 +86,17 @@ const EmpDashboard = () => {
 
               </tbody>
             </table>
+            <a href='#' className='pay-info' onClick={paymentsInfo}>All Payment Information</a>
+
           </div>
 
           <div className='activities'>
             <h6>My Activities</h6>
-
             <hr />
-
             <div className='activity-button '>
               <button className='btn leave-button'>Enter Leave Report</button>
               <button className='btn leave-button'>Request Time Off </button>
             </div>
-
             <br />
             <hr></hr>
           </div>
@@ -97,6 +105,7 @@ const EmpDashboard = () => {
       </div>
 
       <BalanceInfo closeBtn={closeBtn} show={show} />
+      <PaymentInfo paymentClose={paymentClose} newShow={newshow}/>
 
     </div>
 
