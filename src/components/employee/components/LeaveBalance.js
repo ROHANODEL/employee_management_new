@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
-import '../style/empInfo.scss'
+import '../style/LeaveBalance.scss'
 
 const LeaveBalance = (props) => {
   return (
