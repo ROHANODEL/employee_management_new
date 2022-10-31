@@ -12,6 +12,9 @@ import InfoPage from './components/admin/components/InfoPage'
 import NewError from './components/publicPage/NewError';
 import MyProfile from './components/employee/components/MyProfile';
 import MyTeam from './components/employee/components/MyTeam';
+import "react-datepicker/dist/react-datepicker.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
+
 
 function App() {
   return (
@@ -19,7 +22,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Protected Component={EmpDashboard}/>} />
+          <Route path='/' element={<Protected Component={AdminDashboard}/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/addemp' element={<Protected Component={AddEmp} />} />

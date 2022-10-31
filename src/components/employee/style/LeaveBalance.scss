@@ -1,5 +1,19 @@
+@mixin one-leav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin two-leav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
 .modal-ws{
-    min-width: 45%;
+    min-width: 65%;
 }
 
 .month-div{
@@ -9,3 +23,34 @@
         text-decoration: none;
     }  
 }
+
+
+.leav-bal{
+    @include one-leav();
+    .leav-newbal{
+        @include two-leav();
+    }
+}
+
+
+.leav-bal{
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+// .react-datepicker-wrapper {
+//     @include two-leav();
+// }
+// .react-datepicker__input-container{
+// @include two-leav();
+// }
+// .date-input{
+//     @include two-leav();
+// }
+
+// .react-datepicker-popper{
+//     position: absolute;
+//     inset: 0px auto auto 0px;
+//     transform: translate(400px, 106px);
+// }
