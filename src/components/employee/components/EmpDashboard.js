@@ -53,7 +53,7 @@ const EmpDashboard = () => {
           </div>
 
           <div className='emp-info'>
-            <label className='emp-name'>Rohan odel</label><br /><br />
+            <label className='emp-name'>Apurv khadamkar</label><br /><br />
             <button className='btn btn-primary' onClick={profileNew}>My profile</button><br /><br />
             <button className='btn btn-primary' onClick={teamNaw}>My Team</button>
           </div>
