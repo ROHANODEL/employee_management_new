@@ -1,0 +1,22 @@
+
+.leav-bal{
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.new-calendar{
+    height: 30rem;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3rem;
+}
+
+.date-margin{
+    margin-top: 1rem;
+}
+
+.newbtnmargin{
+    margin-left: 4rem;
+}

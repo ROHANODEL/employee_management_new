@@ -25,20 +25,14 @@
 }
 
 
-.leav-bal{
-    @include one-leav();
-    .leav-newbal{
-        @include two-leav();
-    }
-}
+// .leav-bal{
+//     @include one-leav();
+//     .leav-newbal{
+//         @include two-leav();
+//     }
+// }
 
 
-.leav-bal{
-    display: flex;
-    flex-direction: column;
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
 // .react-datepicker-wrapper {
 //     @include two-leav();
 // }

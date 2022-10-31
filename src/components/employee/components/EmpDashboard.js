@@ -4,6 +4,7 @@ import data from '../mock/empDashboard.json'
 import LeaveBalance from './LeaveBalance';
 import PaymentInfo from './PaymentInfo';
 import { Navigate, useNavigate } from 'react-router-dom';
+import CalendarPage from './CalendarPage';
 
 const EmpDashboard = () => {
   
@@ -19,7 +20,8 @@ const EmpDashboard = () => {
   const year = newdate.getFullYear()
 
   const balanceDetails = () => {
-    setShow(true)
+    // setShow(true)
+    navigate('/calendar')
   }
   const closeBtn = () => {
     setShow(false)
@@ -77,7 +79,7 @@ const EmpDashboard = () => {
               </div>
 
             </div>
-            <a href='#' onClick={balanceDetails}>Full Leave Balance Information</a>
+            <a href='' onClick={balanceDetails}>Full Leave Balance Information</a>
           </div>
 
         </div>
@@ -115,7 +117,8 @@ const EmpDashboard = () => {
         </div>
       </div>
 
-      <LeaveBalance closeBtn={closeBtn} show={show} />
+      {/* <LeaveBalance closeBtn={closeBtn} show={show} /> */}
+
       <PaymentInfo paymentClose={paymentClose} newShow={newshow} />
 
     </div>
