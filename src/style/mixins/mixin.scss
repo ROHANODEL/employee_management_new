@@ -1,0 +1,24 @@
+@mixin flex {
+    display: flex;
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 3px 3px 5px 10px rgba(235, 228, 235, 1);
+    -moz-box-shadow: 3px 3px 5px 10px rgba(235, 228, 235, 1);
+    box-shadow: 3px 3px 5px 10px rgba(235, 228, 235, 1);
+}
+
+@mixin flex-property-bet {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin dotted-Border-With-Margin($margin : 2rem) {
+    margin-left: $margin;
+    border: 1px dotted black;
+}
+
+@mixin flex-property-around {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,103 @@
+@import '../../../style/mixins/mixin.scss';
+
+$light-color: rgb(145, 233, 233);
+
+.myProfile {
+    .parent {
+        @include flex;
+
+        .child1 {
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .profile-image {
+                border: 0.1px solid red;
+                border-radius: 50%;
+                margin-top: 2.5rem;
+
+                .img-style {
+                    border-radius: 50%;
+                }
+
+            }
+
+            .pos-btn {
+                margin-left: 1.5rem;
+            }
+
+            .prof {
+                margin-top: 1rem;
+            }
+        }
+
+        .child2 {
+            width: 100vw;
+            margin-top: 2rem;
+            .contains {
+                @include flex-property-around();
+
+                .nav-item:hover {
+                    border-bottom: 4px solid blue;
+
+                }
+            }
+
+            .section-1 {
+                @include dotted-Border-With-Margin();
+                padding-bottom: 1rem;
+
+                .main-heading {
+                    @include flex-property-bet();
+                }
+
+                .details {
+                    .name {
+                        background-color: $light-color;
+                        border-radius: 5px;
+
+                    }
+
+                    .birth {
+                        width: 50%;
+                    }
+                }
+
+                .newcontent {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                    margin-top: 1rem;
+
+                    .abcd {
+                        background-color: $light-color;
+                        border-radius: 0.5rem;
+                        padding: 0.3rem;
+                    }
+                }
+
+                .motherName {
+                    margin-top: 1rem;
+                }
+            }
+
+            .document {
+                    @include dotted-Border-With-Margin();
+                
+                padding-bottom: 1rem;
+
+                .upload-doc {
+                    @include flex();
+
+                    .doc-display {
+                        margin-top: rem;
+                        width: 50vw;
+                        height: 9vw;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
