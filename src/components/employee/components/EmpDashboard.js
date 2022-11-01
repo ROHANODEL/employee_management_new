@@ -3,12 +3,11 @@ import '../style/empDashboard.scss'
 import data from '../mock/empDashboard.json'
 import LeaveBalance from './LeaveBalance';
 import PaymentInfo from './PaymentInfo';
-import { Navigate, useNavigate } from 'react-router-dom';
-import CalendarPage from './CalendarPage';
+import {  useNavigate } from 'react-router-dom';
 
 const EmpDashboard = () => {
   
-  const [show, setShow] = useState(false);
+  const [shows, setShows] = useState(false);
   const [newshow, setNewshow] = useState(false);
 
   const navigate = useNavigate();
@@ -20,11 +19,10 @@ const EmpDashboard = () => {
   const year = newdate.getFullYear()
 
   const balanceDetails = () => {
-    // setShow(true)
-    navigate('/calendar')
+    setShows(true)
   }
-  const closeBtn = () => {
-    setShow(false)
+  const closeBtns = () => {
+    setShows(false)
   }
 
   const paymentsInfo = () => {
@@ -79,7 +77,7 @@ const EmpDashboard = () => {
               </div>
 
             </div>
-            <a href='' onClick={balanceDetails}>Full Leave Balance Information</a>
+            <a href='#' onClick={balanceDetails}>Full Leave Balance Information</a>
           </div>
 
         </div>
@@ -117,7 +115,7 @@ const EmpDashboard = () => {
         </div>
       </div>
 
-      {/* <LeaveBalance closeBtn={closeBtn} show={show} /> */}
+      <LeaveBalance closeBtns={closeBtns} shows={shows} />
 
       <PaymentInfo paymentClose={paymentClose} newShow={newshow} />
 

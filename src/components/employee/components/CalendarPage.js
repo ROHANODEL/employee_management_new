@@ -45,11 +45,11 @@ const CalendarPage = (props) => {
             <div className="leav-bal">
                 <div></div>
                 <div>
-                    <input className="date-margin" type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }}
+                    <input className="date-margin" type="text" placeholder="Leave type" style={{ width: "20%", marginRight: "10px" }}
                         value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
                     <DatePicker className="date-margin" placeholder="start Date" 
                         selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-                    <DatePicker className="date-margin" placeholder="start Date" 
+                    <DatePicker className="date-margin" placeholder="end Date" 
                         selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
                     <button className="btn btn-primary date-margin newbtnmargin" onClick={handleAddEvent}>click</button>
                 </div>

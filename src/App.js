@@ -16,7 +16,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import CalendarPage from './components/employee/components/CalendarPage';
 // import "react-big-calendar/lib/css/react-big-calendar.css";
 
-
 function App() {
   return (
     <div className='app-main'>
@@ -29,9 +28,10 @@ function App() {
           <Route path='/addemp' element={<Protected Component={AddEmp} />} />
           <Route path='/dashboard' element={<Protected Component={EmpDashboard} />} />
           <Route path='/info' element={<Protected Component={InfoPage} />} />
+
           <Route path='/profile' element={<Protected Component={MyProfile} />} />
           <Route path='/team' element={<Protected Component={MyTeam} />} />
-          <Route path='/calendar' element={<Protected Component={CalendarPage} />} />
+          {/* <Route path='/calendar' element={<Protected Component={CalendarPage} />} /> */}
 
 
           <Route path='*' element={<NewError/>} />
